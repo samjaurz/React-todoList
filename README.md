@@ -2,9 +2,11 @@ TODO LIST CREATED IN REACT
 
 API FLASK / DJANGO FLASK
 
-@GET	/task/	Retrieve all tasks.
-GET	/task/<id>	Get an specific task by ID
-GET	/task/search/ ?name = Retrieve all tasks matching with the name 
-POST	/task/	Post a task { name, status }
-PUT	/task/<id>	Updated a specific task with ID
-DELETE	/task/<id>	Delete a specific task
+| Method | Endpoint             | Description                                          |
+| :----- | :------------------- | :--------------------------------------------------- |
+| `GET`  | `/task/`             | Retrieve all tasks.                                  |
+| `GET`  | `/task/<id>`         | Get a specific task by ID.                           |
+| `GET`  | `/task/search/`      | Retrieve all tasks matching with the name (use `?name=<query>` for search). |
+| `POST` | `/task/`             | Create a new task (requires JSON body: `{ "name": "...", "status": "..." }`). |
+| `PUT`  | `/task/<id>`         | Update a specific task by ID (requires JSON body with fields to update). |
+| `DELETE`| `/task/<id>`         | Delete a specific task by ID.  
